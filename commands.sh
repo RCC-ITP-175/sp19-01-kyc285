@@ -31,12 +31,22 @@ ls -a
 #############################################################
 ls -h
 
+# :::PROFESSOR FEEDBACK:::
+# -h is a valid argument for ls but it doesn't accomplish
+# what you hope here.
+# :::PROFESSOR FEEDBACK END:::
+
 #############################################################
 #    What is the command to list all files and folders
 #    in a directory sorted by when they were last
 #    modified?
 #############################################################
 ls -ltc
+
+# :::PROFESSOR FEEDBACK:::
+# Careful using -c here, it changes how -t works to use the time
+# the file attributes were last modified, not the file itself.
+# :::PROFESSOR FEEDBACK END:::
 
 #############################################################
 #    What is the command to find where you are currently
@@ -92,6 +102,11 @@ rm /answers.txt
 #############################################################
 mv quiz.txt/test.txt
 
+# :::PROFESSOR FEEDBACK:::
+# mv will delete the original quiz.txt which is not what we want.
+# How would you copy it instead?
+# :::PROFESSOR FEEDBACK END:::
+
 #############################################################
 #    The directory you are working in currently has these files and directories.
 #           -rw-rw-r-- 1 app  app   875 Jul 26 18:02 index.html
@@ -103,6 +118,13 @@ mv quiz.txt/test.txt
 #     How would you copy all 4 html files into the public directory?
 #############################################################
 cp -r index.html quiz.html project.html lesson.html/public
+
+# :::PROFESSOR FEEDBACK:::
+# Missing space between lesson.html and /public
+# -r not a valid argument for cp -R is, but it isn't applicable here
+# Be careful when using a leading / which means, start are the root directory
+# I didn't specify here, so no points off for that.
+# :::PROFESSOR FEEDBACK END:::
 
 #############################################################
 #    The directory you are working in currently has these files and directories.
@@ -116,4 +138,8 @@ cp -r index.html quiz.html project.html lesson.html/public
 #############################################################
 mv index.html quiz.html project.html lesson.html/public
 
-
+# :::PROFESSOR FEEDBACK:::
+# Missing space between lesson.html and /public
+# Be careful when using a leading / which means, start are the root directory
+# I didn't specify here, so no points off for that.
+# :::PROFESSOR FEEDBACK END:::
